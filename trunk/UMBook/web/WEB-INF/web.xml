@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <context-param>
+        <description>directorio de fotos. 
+Cada Usuario está representado por un carpeta con su ID. 
+Idem para Cada Album.</description>
+        <param-name>directorioFotos</param-name>
+        <param-value>D:/UMBook/Fotos/</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>ServicioUsuario</servlet-name>
+        <servlet-class>gestionarUsuario.ServicioUsuario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BajarFotos</servlet-name>
+        <servlet-class>gestionarFotos.BajarFotos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServicioMuro</servlet-name>
+        <servlet-class>gestionarMuro.ServicioMuro</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServicioAmigos</servlet-name>
+        <servlet-class>gestionarAmigos.ServicioAmigos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServicioFotos</servlet-name>
+        <servlet-class>gestionarFotos.ServicioFotos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SubirFotos</servlet-name>
+        <servlet-class>gestionarFotos.SubirFotos</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServicioUsuario</servlet-name>
+        <url-pattern>/ServicioUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BajarFotos</servlet-name>
+        <url-pattern>/BajarFotos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServicioMuro</servlet-name>
+        <url-pattern>/ServicioMuro</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServicioAmigos</servlet-name>
+        <url-pattern>/ServicioAmigos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServicioFotos</servlet-name>
+        <url-pattern>/ServicioFotos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SubirFotos</servlet-name>
+        <url-pattern>/SubirFotos</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
